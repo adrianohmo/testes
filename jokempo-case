@@ -1,0 +1,150 @@
+package br.gov.caixa.main;
+
+import java.util.Scanner;
+
+public class Jokempo2 {
+
+	public static void main(String[] args) {
+		
+		
+		
+		
+		
+		Scanner teclado = new Scanner(System.in);
+		//System.out.println("Olá, entre com o nome jogador");
+		String jogador = teclado.next();
+		String[] jogadas = {"pedra","papel","tesoura"};
+		//System.out.println("pedra, papel ou tesoura?");
+		String jogada = teclado.next();
+		int placarPC = 0;
+		int placarJogador = 0;
+		
+		
+		
+		
+		System.out.println("Informe a quantidade de Jogadas");
+		String qtde1 = teclado.next();
+		int qtde2= Integer.parseInt(qtde1);
+		
+		
+		for (int i = 0; i < qtde2; i++) {
+			String jogadaPC = "";
+			jogadaPC +=  Math.random()*3;
+			jogadaPC = jogadaPC.substring(0,1);
+			int escolhaPC= Integer.parseInt(jogadaPC);
+			System.out.println("pedra, papel ou tesoura?");
+			
+			
+			switch (jogada) {
+			case "pedra":{
+			
+				if (jogada.equals("pedra") & jogadas[escolhaPC].equals("papel") ){
+					System.out.println(jogador + " escolheu: " + jogada);
+					System.out.println("O computador escolheu: " + jogadas[escolhaPC]);
+					System.out.println("Computador ganhou");
+					placarPC+=1;
+					System.out.println("\n O Placar é: \n " + jogador + " " + placarJogador + " X Computador" + " " + placarPC);
+					
+				}
+				if (jogada.equals("pedra") & jogadas[escolhaPC].equals("tesoura") ){
+					System.out.println(jogador + " escolheu: " + jogada);
+					System.out.println("O computador escolheu: " + jogadas[escolhaPC]);
+					System.out.println(jogador + " Ganhou");
+					placarJogador+=1;
+					System.out.println("\n O Placar é: \n " + jogador + " " + placarJogador + " X Computador" + " " + placarPC);
+					
+				}
+				if (jogada.equals("pedra") & jogadas[escolhaPC].equals("pedra") ){
+					System.out.println(jogador + " escolheu: " + jogada);
+					System.out.println("O computador escolheu: " + jogadas[escolhaPC]);
+					System.out.println("Resultado foi Empate");
+					System.out.println("\n O Placar é: \n " + jogador + " " + placarJogador + " X Computador" + " " + placarPC);
+					
+				}
+			}
+				break;
+				
+			case "papel":{
+				
+				if (jogada.equals("papel") & jogadas[escolhaPC].equals("pedra") ){
+					System.out.println(jogador + " escolheu: " + jogada);
+					System.out.println("O computador escolheu: " + jogadas[escolhaPC]);
+					System.out.println(jogador + " Ganhou");
+					placarJogador+=1;
+					System.out.println("\n O Placar é: \n " + jogador + " " + placarJogador + " X Computador" + " " + placarPC);
+					
+				}
+				if (jogada.equals("papel") & jogadas[escolhaPC].equals("tesoura") ){
+					System.out.println(jogador + " escolheu: " + jogada);
+					System.out.println("O computador escolheu: " + jogadas[escolhaPC]);
+					System.out.println("Computador ganhou");
+					placarPC+=1;
+					System.out.println("\n O Placar é: \n " + jogador + " " + placarJogador + " X Computador" + " " + placarPC);
+					
+				}
+				if (jogada.equals("papel") & jogadas[escolhaPC].equals("papel") ){
+					System.out.println(jogador + " escolheu: " + jogada);
+					System.out.println("O computador escolheu: " + jogadas[escolhaPC]);
+					System.out.println("Resultado foi Empate");
+					System.out.println("\n O Placar é: \n " + jogador + " " + placarJogador + " X Computador" + " " + placarPC);
+					
+					
+				}
+			}
+				break;
+				
+			case "tesoura":{
+				
+				if (jogada.equals("tesoura") & jogadas[escolhaPC].equals("pedra") ){
+					System.out.println(jogador + " escolheu: " + jogada);
+					System.out.println("O computador escolheu: " + jogadas[escolhaPC]);
+					System.out.println("Computador ganhou");
+					placarPC+=1;
+					System.out.println("\n O Placar é: \n " + jogador + " " + placarJogador + " X Computador" + " " + placarPC);
+					
+				
+				}
+				if (jogada.equals("tesoura") & jogadas[escolhaPC].equals("papel") ){
+					System.out.println(jogador + " escolheu: " + jogada);
+					System.out.println("O computador escolheu: " + jogadas[escolhaPC]);
+					System.out.println(jogador + " Ganhou");
+					placarJogador+=1;
+					System.out.println("\n O Placar é: \n " + jogador + " " + placarJogador + " X Computador" + " " + placarPC);
+					
+					
+				}
+				if (jogada.equals("tesoura") & jogadas[escolhaPC].equals("tesoura") ){
+					System.out.println(jogador + " escolheu: " + jogada);
+					System.out.println("O computador escolheu: " + jogadas[escolhaPC]);
+					System.out.println("Resultado foi Empate");
+					System.out.println("\n O Placar é: \n " + jogador + " " + placarJogador + " X Computador" + " " + placarPC);
+					
+					
+				}
+			}
+				break;	
+
+			default:
+				System.out.println("escolha entre pedra, papel ou tesoura");
+				
+				
+				break;
+				
+				
+			}//fim switch
+			
+			
+			
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}
